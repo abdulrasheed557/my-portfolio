@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<!-- Tells the browser that this document uses HTML5. -->
+
+<html lang="en">
+<!-- The html element contains the entire webpage.
+     lang="en" tells the browser that the page is in English. -->
+
+<head>
+    <!-- The head contains information about the website. -->
+
+    <meta charset="UTF-8">
+    <!-- Allows the browser to display text and symbols correctly. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the website fit phone, tablet, and computer screens. -->
+
+    <meta name="description" content="Jimoh abdulrasheed's personal portfolio as an aspiring software developer.">
+    <!-- Describes the website to search engines. -->
+
+    <title>Jimoh abdulrasheed | Aspiring Software Developer</title>
+    <!-- This appears in the browser tab. -->
+
+    <!-- Connects this HTML file to our external CSS file. -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Loads the Poppins and Inter fonts from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Loads Font Awesome icons for the social links and cards. -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVIGATION BAR
+         This section contains the logo and page links.
+    =========================================== -->
+
+    <header class="header">
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <!-- The logo links back to the homepage. -->
+            <a href="#home" class="logo">
+                <span>&lt;</span>Jimoh abdulrasheed<span> /&gt;</span>
+            </a>
+
+            <!-- These links jump to sections on this webpage. -->
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#journey">My Journey</a>
+                <a href="#contact" class="nav-button">Let's Connect</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- ==========================================
+         HERO SECTION
+         Introduces Jimoh abdulrasheed to visitors.
+    =========================================== -->
+
+    <main>
+
+        <section class="hero section" id="home">
+            <div class="container hero-grid">
+
+                <!-- Left side: introduction and buttons. -->
+                <div class="hero-content">
+
+                    <span class="intro-badge">
+                        <span class="status-dot"></span>
+                        Welcome to my portfolio
+                    </span>
+
+                    <p class="eyebrow">HELLO, I'M</p>
+
+                    <h1>
+                        Jimoh abdulrasheed<span class="accent">.</span>
+                    </h1>
+
+                    <h2>
+                        Aspiring <span class="gradient-text">Software Developer</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        I'm passionate about technology, programming, and
+                        creating digital experiences. I'm learning how to
+                        turn ideas into useful solutions, one line of code
+                        at a time.
+                    </p>
+
+                    <!-- These buttons navigate to other sections. -->
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            Explore My Projects
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#contact" class="btn btn-secondary">
+                            Contact Me
+                        </a>
+                    </div>
+
+                    <!-- Social links. Replace the example links with real profiles. -->
+                    <div class="social-links">
+                        <a href="https://github.com/"
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/"
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="mailto:johndoe@example.com"
+                           aria-label="Send John an email">
+                            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- Right side: decorative code editor.
+                     The code is displayed as text, not executed as HTML. -->
+                <div class="hero-visual">
+
+                    <div class="glow-circle"></div>
+
+                    <div class="code-window">
+
+                        <!-- Decorative window controls. -->
+                        <div class="window-header">
+                            <div class="window-dots" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span class="file-name">developer.html</span>
+                        </div>
+
+                        <!-- The pre and code elements preserve code formatting. -->
+                        <pre class="code-content"><code><span class="code-purple">&lt;div</span> <span class="code-blue">class</span>=<span class="code-orange">"developer"</span><span class="code-purple">&gt;</span>
+  <span class="code-purple">&lt;h1&gt;</span>Jimoh abdulrasheed<span class="code-purple">&lt;/h1&gt;</span>
+  <span class="code-purple">&lt;p&gt;</span>
+    Aspiring Developer
+  <span class="code-purple">&lt;/p&gt;</span>
+  <span class="code-purple">&lt;p&gt;</span>
+    Learning. Building. Growing.
+  <span class="code-purple">&lt;/p&gt;</span>
+<span class="code-purple">&lt;/div&gt;</span></code></pre>
+
+                        <div class="code-footer">
+                            <span><i class="fa-solid fa-code" aria-hidden="true"></i> HTML5</span>
+                            <span>Learning mode: ON</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Floating decorative badges. -->
+                    <div class="floating-badge badge-one">
+                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                        HTML5
+                    </div>
+
+                    <div class="floating-badge badge-two">
+                        <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                        CSS3
+                    </div>
+
+                    <div class="learning-badge">
+                        <span class="status-dot"></span>
+                        Currently learning & building
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             ABOUT ME SECTION
+             Tells visitors about Jimoh abdulrasheed and his ambitions.
+        =========================================== -->
+
+        <section class="section about-section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">GET TO KNOW ME</p>
+                    <h2>About <span class="gradient-text">Me</span></h2>
+                    <p>The person behind the code.</p>
+                </div>
+
+                <div class="about-grid">
+
+                    <!-- Decorative profile placeholder.
+                         Replace the letter J with a real photo if desired. -->
+                    <div class="about-visual">
+                        <div class="profile-card">
+                            <div class="profile-initial">J</div>
+
+                            <h3>Jimoh abdulrasheed</h3>
+                            <p>Aspiring Software Developer</p>
+
+                            <div class="profile-line"></div>
+
+                            <span class="profile-tag">
+                                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                                Future Software Engineer
+                            </span>
+                        </div>
+
+                        <div class="about-decoration decoration-one"></div>
+                        <div class="about-decoration decoration-two"></div>
+                    </div>
+
+                    <!-- Text about Jimoh's learning journey. -->
+                    <div class="about-content">
+
+                        <h3>Curious Mind. Creative Thinker. Future Developer.</h3>
+
+                        <p>
+                            Hello! I'm Jimoh abdulrasheed, an aspiring software developer
+                            with a growing passion for technology and innovation.
+                        </p>
+
+                        <p>
+                            My interest in programming comes from wanting to
+                            understand how websites, applications, and software
+                            systems work. I'm learning the foundations of web
+                            development and practising how to create digital
+                            experiences from scratch.
+                        </p>
+
+                        <p>
+                            I enjoy discovering new concepts, solving problems,
+                            learning from mistakes, and improving through practice.
+                            My goal is to become a professional software developer
+                            who builds useful, reliable, and meaningful applications.
+                        </p>
+
+                        <p>
+                            I believe that consistency, curiosity, and patience
+                            are important parts of becoming a better developer.
+                            Every project is another opportunity to learn.
+                        </p>
+
+                        <!-- Personal information cards. -->
+                        <div class="info-grid">
+
+                            <div class="info-card">
+                                <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Career Goal</h4>
+                                    <p>Software Developer</p>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Current Focus</h4>
+                                    <p>Web Development</p>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Passion</h4>
+                                    <p>Technology & Innovation</p>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                                <div>
+                                    <h4>My Approach</h4>
+                                    <p>Learn and Practise</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a href="#skills" class="btn btn-primary">
+                            Discover My Skills
+                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             SKILLS SECTION
+             Shows technologies Jimoh is learning.
+        =========================================== -->
+
+        <section class="section skills-section" id="skills">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">WHAT I'M LEARNING</p>
+                    <h2>My Skills & <span class="gradient-text">Technologies</span></h2>
+                    <p>Building my foundation, one skill at a time.</p>
+                </div>
+
+                <div class="skills-grid">
+
+                    <article class="skill-card">
+                        <div class="skill-icon html-icon">
+                            <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                        </div>
+                        <h3>HTML5</h3>
+                        <p>
+                            Learning to structure webpages with headings,
+                            paragraphs, links, images, and semantic elements.
+                        </p>
+                        <span class="skill-label">Currently Learning</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon css-icon">
+                            <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3>CSS3</h3>
+                        <p>
+                            Exploring colours, typography, responsive layouts,
+                            animations, and modern website design.
+                        </p>
+                        <span class="skill-label">Currently Learning</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon python-icon">
+                            <i class="fa-brands fa-python" aria-hidden="true"></i>
+                        </div>
+                        <h3>Python</h3>
+                        <p>
+                            Interested in programming fundamentals, logical
+                            thinking, and solving problems with code.
+                        </p>
+                        <span class="skill-label">Learning Goal</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon git-icon">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </div>
+                        <h3>Git & GitHub</h3>
+                        <p>
+                            Exploring version control and ways to organise
+                            and share software projects.
+                        </p>
+                        <span class="skill-label">Learning Goal</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon responsive-icon">
+                            <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+                        <p>
+                            Learning to make websites adapt to phones,
+                            tablets, laptops, and desktop screens.
+                        </p>
+                        <span class="skill-label">Currently Learning</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon problem-icon">
+                            <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                        </div>
+                        <h3>Problem Solving</h3>
+                        <p>
+                            Practising logical thinking and learning to
+                            approach coding challenges step by step.
+                        </p>
+                        <span class="skill-label">Growing Every Day</span>
+                    </article>
+
+                </div>
+
+                <!-- Technologies to explore in the future. -->
+                <div class="exploring-box">
+                    <h3>Technologies I Want to Explore</h3>
+
+                    <p>
+                        These are some of the technologies I hope to learn
+                        as my software development journey continues.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Databases</span>
+                        <span>APIs</span>
+                        <span>Backend Development</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             PROJECTS SECTION
+             Displays sample projects and practice ideas.
+        =========================================== -->
+
+        <section class="section projects-section" id="projects">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">MY WORK</p>
+                    <h2>Featured <span class="gradient-text">Projects</span></h2>
+                    <p>Learning by building and practising.</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <article class="project-card">
+
+                        <div class="project-preview preview-one">
+                            <div class="mini-browser">
+                                <div class="mini-browser-bar">
+                                    <span></span><span></span><span></span>
+                                </div>
+
+                                <div class="mini-portfolio">
+                                    <div class="mini-sidebar"></div>
+                                    <div class="mini-lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <div class="mini-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span class="project-number">01</span>
+                        </div>
+
+                        <div class="project-content">
+                            <span class="project-category">WEB DEVELOPMENT</span>
+
+                            <h3>Personal Portfolio Website</h3>
+
+                            <p>
+                                A modern portfolio concept designed to
+                                introduce a developer, display skills,
+                                and showcase projects.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                            </div>
+
+                            <a href="#contact" class="project-link">
+                                Discuss This Project
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+
+                        <div class="project-preview preview-two">
+                            <div class="product-mockup">
+                                <div class="product-circle"></div>
+                                <div class="product-lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="product-action"></div>
+                            </div>
+
+                            <span class="project-number">02</span>
+                        </div>
+
+                        <div class="project-content">
+                            <span class="project-category">FRONTEND DEVELOPMENT</span>
+
+                            <h3>Product Landing Page</h3>
+
+                            <p>
+                                A sample landing page concept featuring
+                                product information, a clean interface,
+                                and responsive styling.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                            </div>
+
+                            <a href="#contact" class="project-link">
+                                Discuss This Project
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+
+                        <div class="project-preview preview-three">
+                            <div class="form-mockup">
+                                <div class="mockup-title"></div>
+                                <div class="mockup-input"></div>
+                                <div class="mockup-input"></div>
+                                <div class="mockup-input"></div>
+                                <div class="mockup-submit"></div>
+                            </div>
+
+                            <span class="project-number">03</span>
+                        </div>
+
+                        <div class="project-content">
+                            <span class="project-category">WEB DESIGN PRACTICE</span>
+
+                            <h3>Student Registration Form</h3>
+
+                            <p>
+                                A form design concept featuring organised
+                                input fields, clear labels, and a simple
+                                user-friendly layout.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                            </div>
+
+                            <a href="#contact" class="project-link">
+                                Discuss This Project
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- These are sample concepts, not claims of completed work. -->
+                <div class="projects-note">
+                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    <p>
+                        These are sample project concepts. I'll add links to
+                        completed projects as I build and publish them.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             DEVELOPER JOURNEY
+             Shows jimoh's learning goals as a timeline.
+        =========================================== -->
+
+        <section class="section journey-section" id="journey">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">MY PROGRESS</p>
+                    <h2>My Developer <span class="gradient-text">Journey</span></h2>
+                    <p>Every expert was once a beginner.</p>
+                </div>
+
+                <div class="timeline">
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker">01</div>
+
+                        <div class="timeline-card">
+                            <span class="timeline-label">THE BEGINNING</span>
+                            <h3>Discovering Technology</h3>
+                            <p>
+                                My journey begins with curiosity about how
+                                websites, applications, and computer
+                                programs work.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker">02</div>
+
+                        <div class="timeline-card">
+                            <span class="timeline-label">BUILDING FOUNDATIONS</span>
+                            <h3>Learning HTML & CSS</h3>
+                            <p>
+                                I'm learning how to structure webpages
+                                with HTML and style them with CSS.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker">03</div>
+
+                        <div class="timeline-card">
+                            <span class="timeline-label">PRACTICE</span>
+                            <h3>Creating Projects</h3>
+                            <p>
+                                My goal is to turn lessons into practical
+                                projects that help me understand how
+                                websites are built.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker">04</div>
+
+                        <div class="timeline-card">
+                            <span class="timeline-label">NEXT CHALLENGE</span>
+                            <h3>Exploring Programming</h3>
+                            <p>
+                                I plan to explore programming languages,
+                                development tools, and software
+                                engineering fundamentals.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker">05</div>
+
+                        <div class="timeline-card">
+                            <span class="timeline-label">THE BIG GOAL</span>
+                            <h3>Becoming a Software Developer</h3>
+                            <p>
+                                My long-term goal is to develop useful
+                                software, collaborate with other developers,
+                                and contribute to technology.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             CAREER GOALS
+             Explains Jimoh's future ambitions.
+        =========================================== -->
+
+        <section class="section goals-section" id="goals">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">LOOKING AHEAD</p>
+                    <h2>My Career <span class="gradient-text">Goals</span></h2>
+                    <p>What I hope to achieve in technology.</p>
+                </div>
+
+                <div class="goals-grid">
+
+                    <article class="goal-card">
+                        <div class="goal-icon">
+                            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                        </div>
+
+                        <h3>Become a Professional Developer</h3>
+
+                        <p>
+                            Build strong programming foundations and
+                            develop the skills needed to create
+                            reliable software applications.
+                        </p>
+                    </article>
+
+                    <article class="goal-card">
+                        <div class="goal-icon">
+                            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                        </div>
+
+                        <h3>Build Real-World Solutions</h3>
+
+                        <p>
+                            Turn creative ideas into useful digital
+                            products that solve everyday problems
+                            and make life easier.
+                        </p>
+                    </article>
+
+                    <article class="goal-card">
+                        <div class="goal-icon">
+                            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                        </div>
+
+                        <h3>Learn and Collaborate</h3>
+
+                        <p>
+                            Learn from experienced developers, share
+                            ideas, contribute to projects, and continue
+                            improving my skills.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================
+             CONTACT SECTION
+             Provides ways to contact Jimoh abdulrasheed.
+        =========================================== -->
+
+        <section class="section contact-section" id="contact">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">GET IN TOUCH</p>
+                    <h2>Let's <span class="gradient-text">Connect</span></h2>
+                    <p>Have an idea, opportunity, or advice to share?</p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <!-- Left side: contact information. -->
+                    <div class="contact-info">
+
+                        <h3>Let's Build Something Great</h3>
+
+                        <p>
+                            I'm interested in learning opportunities,
+                            mentorship, collaborations, and conversations
+                            about software development.
+                        </p>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                            </div>
+
+                            <div>
+                                <h4>Email Me</h4>
+                                <a href="mailto:jimoh@example.com">
+                                    jimoh@example.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            </div>
+
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/"
+                                   target="_blank" rel="noopener noreferrer">
+                                    Explore GitHub
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                            </div>
+
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/"
+                                   target="_blank" rel="noopener noreferrer">
+                                    Connect on LinkedIn
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Right side: visual contact form.
+                         HTML and CSS alone cannot send messages to Jimoh. -->
+                    <form class="contact-form"
+                          action="mailto:jimoh@example.com"
+                          method="post"
+                          enctype="text/plain">
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+
+                                <!-- The for attribute connects this label to its input. -->
+                                <input type="text"
+                                       id="name"
+                                       name="Name"
+                                       placeholder="Your name"
+                                       autocomplete="name"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+
+                                <input type="email"
+                                       id="email"
+                                       name="Email"
+                                       placeholder="you@example.com"
+                                       autocomplete="email"
+                                       required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+
+                            <input type="text"
+                                   id="subject"
+                                   name="Subject"
+                                   placeholder="What would you like to discuss?"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+
+                            <textarea id="message"
+                                      name="Message"
+                                      rows="5"
+                                      placeholder="Write your message here..."
+                                      required></textarea>
+                        </div>
+
+                        <!-- This button attempts to open the visitor's email app.
+                             Email handling depends on the visitor's device settings. -->
+                        <button type="submit" class="btn btn-primary submit-button">
+                            Send Message
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+
+                        <p class="form-note">
+                            This demo uses your device's email application.
+                            For reliable message delivery, connect a backend
+                            or a form service.
+                        </p>
+
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+         Displays the closing message and quick links.
+    =========================================== -->
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span>&lt;</span>Jimoh abdulrasheed<span> /&gt;</span>
+                    </a>
+
+                    <p>
+                        Aspiring Software Developer.<br>
+                        Learning, building, and growing.
+                    </p>
+                </div>
+
+                <div class="footer-navigation">
+                    <h3>Quick Links</h3>
+
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Let's Connect</h3>
+
+                    <div class="social-links">
+                        <a href="https://github.com/"
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/"
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="mailto:jimoh@example.com"
+                           aria-label="Email">
+                            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jimoh abdulrasheed. All rights reserved.</p>
+                <p>Designed with passion. Built with HTML & CSS.</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

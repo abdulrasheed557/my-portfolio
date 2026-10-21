@@ -1,0 +1,1248 @@
+/* =========================================================
+   JOHN DOE — SOFTWARE DEVELOPER PORTFOLIO
+   File: style.css
+   Description: Styles the portfolio website, including
+   the navigation, hero section, about, skills, projects,
+   contact section, and footer.
+   ========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL STYLES
+   These rules apply to the entire website.
+   ========================================================= */
+
+/* Import modern fonts from Google Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Remove default spacing and make element sizing predictable. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define reusable colors, fonts, and design values. */
+:root {
+    --bg-color: #080b14;
+    --surface-color: #101522;
+    --surface-light: #171e2e;
+    --primary-color: #6c63ff;
+    --secondary-color: #00d4ff;
+    --text-color: #f4f6ff;
+    --text-muted: #a4adc3;
+    --border-color: rgba(255, 255, 255, 0.09);
+    --gradient: linear-gradient(135deg, #6c63ff, #00d4ff);
+    --container-width: 1150px;
+}
+
+/* Enable smooth scrolling when navigating between sections. */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+/* Set the main website background, font, and text color. */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Make headings use a modern, distinctive font. */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.2;
+}
+
+/* Remove the default underline from links. */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Make images responsive so they never overflow their containers. */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Give buttons and links a consistent interaction experience. */
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure form controls inherit the website's typography. */
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+/* Create a reusable container for centered page content. */
+.container {
+    width: min(90%, var(--container-width));
+    margin: 0 auto;
+}
+
+/* Style the highlighted text used throughout the website. */
+.gradient-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Style the small introductory label above section headings. */
+.section-label {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* Create a consistent style for section headings. */
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+/* Style descriptive text beneath section headings. */
+.section-description {
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Provide consistent spacing for each major section. */
+section {
+    padding: 100px 0;
+}
+
+/* Center section headings and their descriptions. */
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+
+/* =========================================================
+   2. NAVIGATION BAR
+   Creates a clean navigation bar that stays at the top.
+   ========================================================= */
+
+/* Keep the navigation visible while visitors scroll. */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(8, 11, 20, 0.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Align the logo, navigation links, and button horizontally. */
+.nav-container {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* Style John Doe's text-based logo. */
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* Give the logo's punctuation a colorful appearance. */
+.logo span {
+    color: var(--secondary-color);
+}
+
+/* Display the navigation links in a horizontal row. */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+/* Style the navigation links. */
+.nav-links a {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Highlight navigation links when the visitor hovers over them. */
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Style the main contact button in the navigation bar. */
+.nav-contact {
+    padding: 11px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--text-color) !important;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Give the navigation contact button an interactive hover effect. */
+.nav-contact:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   3. BUTTONS
+   Reusable button styles for important website actions.
+   ========================================================= */
+
+/* Establish a shared appearance for all primary buttons. */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+/* Give primary buttons a colorful gradient background. */
+.btn-primary {
+    background: var(--gradient);
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.2);
+}
+
+/* Make primary buttons rise slightly when hovered over. */
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(108, 99, 255, 0.35);
+}
+
+/* Create an outlined button for secondary actions. */
+.btn-outline {
+    background: transparent;
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+/* Highlight outlined buttons on hover. */
+.btn-outline:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   4. HERO SECTION
+   Introduces John Doe with a bold headline and call to action.
+   ========================================================= */
+
+/* Give the hero section generous spacing and subtle background effects. */
+.hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 90px 0;
+    background:
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(108, 99, 255, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(0, 212, 255, 0.07),
+            transparent 30%
+        );
+}
+
+/* Place the hero content and illustration side by side. */
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 70px;
+}
+
+/* Style the small availability message above the main heading. */
+.availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    margin-bottom: 25px;
+    background: rgba(0, 212, 255, 0.07);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 50px;
+    color: var(--secondary-color);
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+/* Create the small glowing indicator beside the availability message. */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #35e89a;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(53, 232, 154, 0.7);
+}
+
+/* Make the main hero heading large and visually dominant. */
+.hero h1 {
+    max-width: 750px;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+/* Style the introduction beneath the hero heading. */
+.hero-description {
+    max-width: 600px;
+    color: var(--text-muted);
+    font-size: 1.08rem;
+    margin-bottom: 32px;
+}
+
+/* Keep the hero buttons aligned with consistent spacing. */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+/* Arrange the social links in a neat horizontal row. */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Style individual social links. */
+.social-links a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+/* Highlight social links on hover. */
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Create a decorative area for the developer illustration or avatar. */
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 380px;
+}
+
+/* Build a glowing circular background around the illustration. */
+.hero-circle {
+    position: absolute;
+    width: min(330px, 80vw);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        rgba(108, 99, 255, 0.25),
+        rgba(0, 212, 255, 0.08)
+    );
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    box-shadow: 0 0 100px rgba(108, 99, 255, 0.12);
+}
+
+/* Style the code-card illustration shown in the hero area. */
+.code-card {
+    position: relative;
+    z-index: 1;
+    width: min(350px, 100%);
+    padding: 25px;
+    background: rgba(16, 21, 34, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+    transform: rotate(-3deg);
+    transition: transform 0.4s ease;
+}
+
+/* Straighten the code card when visitors hover over it. */
+.code-card:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+/* Create the small colored dots in the code card's header. */
+.code-card-header {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 25px;
+}
+
+/* Give each decorative window dot a circular shape. */
+.code-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff6b6b;
+}
+
+/* Color the second decorative window dot. */
+.code-dot:nth-child(2) {
+    background: #ffd166;
+}
+
+/* Color the third decorative window dot. */
+.code-dot:nth-child(3) {
+    background: #35e89a;
+}
+
+/* Style the sample code text. */
+.code-content {
+    font-family: monospace;
+    font-size: 0.9rem;
+    line-height: 2;
+    overflow-wrap: anywhere;
+}
+
+/* Highlight code keywords in purple. */
+.code-purple {
+    color: #b49aff;
+}
+
+/* Highlight code strings in cyan. */
+.code-blue {
+    color: #6de4ff;
+}
+
+/* Highlight code function names in green. */
+.code-green {
+    color: #7ee787;
+}
+
+/* Add a floating badge to make the hero illustration more dynamic. */
+.floating-badge {
+    position: absolute;
+    z-index: 2;
+    padding: 12px 16px;
+    background: var(--surface-light);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    font-size: 0.85rem;
+    font-weight: 600;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Position the first floating badge near the upper-right corner. */
+.badge-top {
+    top: 35px;
+    right: 0;
+}
+
+/* Position the second floating badge near the lower-left corner. */
+.badge-bottom {
+    bottom: 35px;
+    left: 0;
+    animation-delay: 1s;
+}
+
+/* Define the floating animation for the decorative badges. */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================================================
+   5. ABOUT SECTION
+   Presents John's background, goals, and development interests.
+   ========================================================= */
+
+/* Separate the about section visually from the hero section. */
+.about {
+    background: var(--surface-color);
+}
+
+/* Arrange the about text and information cards in two columns. */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+/* Style the descriptive text in the about section. */
+.about-text p {
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
+
+/* Arrange the about information cards in a grid. */
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Give each about card a clean, modern appearance. */
+.about-card {
+    padding: 28px 22px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Make about cards lift slightly when hovered over. */
+.about-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-color);
+}
+
+/* Style the icon or emoji inside each about card. */
+.about-card .card-icon {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Style the heading inside each about card. */
+.about-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+/* Style the description inside each about card. */
+.about-card p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   6. SKILLS SECTION
+   Displays programming languages and development skills.
+   ========================================================= */
+
+/* Arrange skill cards into a responsive grid. */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Style each skill category card. */
+.skill-card {
+    padding: 28px;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Lift skill cards on hover. */
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+/* Style the icon representing each skill category. */
+.skill-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    background: rgba(108, 99, 255, 0.12);
+    border-radius: 12px;
+    font-size: 1.5rem;
+}
+
+/* Style the skill category title. */
+.skill-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+/* Style the introductory description in each skill card. */
+.skill-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Allow skill labels to wrap onto multiple lines. */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Style each individual skill label. */
+.skill-tag {
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: #c5cce0;
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   7. PROJECTS SECTION
+   Showcases John's completed or ongoing development projects.
+   ========================================================= */
+
+/* Give the projects area a subtly different background. */
+.projects {
+    background: var(--surface-color);
+}
+
+/* Arrange project cards in a three-column grid. */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Create the main container for each project. */
+.project-card {
+    overflow: hidden;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Add a subtle lifting effect to project cards. */
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(108, 99, 255, 0.65);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the decorative preview area at the top of each project. */
+.project-image {
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(108, 99, 255, 0.22),
+            transparent 70%
+        ),
+        var(--surface-light);
+}
+
+/* Style an emoji or icon used as a project preview. */
+.project-image span {
+    font-size: 4rem;
+    transition: transform 0.4s ease;
+}
+
+/* Enlarge the project preview icon when the card is hovered over. */
+.project-card:hover .project-image span {
+    transform: scale(1.12);
+}
+
+/* Add padding around the project's text and links. */
+.project-content {
+    padding: 25px;
+}
+
+/* Style the project title. */
+.project-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+/* Style the project description. */
+.project-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Keep project technology tags in a horizontal row. */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+/* Give each project technology tag a subtle accent background. */
+.project-tech span {
+    padding: 5px 9px;
+    background: rgba(108, 99, 255, 0.1);
+    border-radius: 5px;
+    color: #b8b1ff;
+    font-size: 0.75rem;
+}
+
+/* Style the links to project demos and source code. */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+/* Give project links a clean, understated appearance. */
+.project-links a {
+    color: var(--text-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Highlight project links when hovered over. */
+.project-links a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* =========================================================
+   8. LEARNING JOURNEY SECTION
+   Highlights professional development and future goals.
+   ========================================================= */
+
+/* Center the learning journey content. */
+.journey-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Create the vertical timeline layout. */
+.timeline {
+    position: relative;
+    padding-left: 35px;
+}
+
+/* Draw the vertical line connecting timeline entries. */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 8px;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+}
+
+/* Space out individual timeline entries. */
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+/* Create the circular marker for each timeline entry. */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -33px;
+    width: 12px;
+    height: 12px;
+    background: var(--secondary-color);
+    border: 3px solid var(--bg-color);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
+}
+
+/* Style the content panel for each timeline entry. */
+.timeline-content {
+    padding: 25px;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+/* Highlight the date or stage of each timeline entry. */
+.timeline-date {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* Style the timeline entry heading. */
+.timeline-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+}
+
+/* Style the description of each learning milestone. */
+.timeline-content p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   9. CONTACT SECTION
+   Encourages visitors to get in touch with John.
+   ========================================================= */
+
+/* Give the contact section a subtle gradient background. */
+.contact {
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(108, 99, 255, 0.12),
+            transparent 55%
+        ),
+        var(--surface-color);
+}
+
+/* Center the contact content and restrict its width. */
+.contact-container {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Style the contact introduction. */
+.contact-description {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 35px;
+}
+
+/* Arrange the contact details in a flexible row. */
+.contact-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+/* Style each contact information card. */
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    text-align: left;
+    transition: border-color 0.3s ease;
+}
+
+/* Highlight contact cards when visitors hover over them. */
+.contact-option:hover {
+    border-color: var(--secondary-color);
+}
+
+/* Style the icon within each contact card. */
+.contact-option-icon {
+    font-size: 1.4rem;
+}
+
+/* Style the small descriptive label in each contact card. */
+.contact-option small {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+/* Style the main contact detail. */
+.contact-option strong {
+    display: block;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+/* Give the main contact action some breathing room. */
+.contact-action {
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   10. FOOTER
+   Adds a clean closing section at the bottom of the website.
+   ========================================================= */
+
+/* Separate the footer from the contact section. */
+.footer {
+    padding: 28px 0;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-color);
+}
+
+/* Align the footer text and social links. */
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Style the copyright notice. */
+.footer p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Arrange the footer links horizontally. */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Style individual footer links. */
+.footer-links a {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+/* Highlight footer links on hover. */
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* =========================================================
+   11. RESPONSIVE DESIGN — TABLETS
+   Adjusts the layout for medium-sized screens.
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    /* Reduce the space between the hero columns. */
+    .hero-container {
+        gap: 35px;
+    }
+
+    /* Reduce the hero heading size on medium screens. */
+    .hero h1 {
+        font-size: clamp(2.5rem, 5.5vw, 4rem);
+        letter-spacing: -2px;
+    }
+
+    /* Make the about section more compact. */
+    .about-container {
+        gap: 35px;
+    }
+
+    /* Display skill cards in two columns. */
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Display project cards in two columns. */
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Hide the navigation contact button if space becomes limited. */
+    .nav-contact {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   12. RESPONSIVE DESIGN — MOBILE PHONES
+   Adapts the website for smaller screens.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Reduce the spacing around major sections. */
+    section {
+        padding: 75px 0;
+    }
+
+    /* Reduce the navigation bar's height. */
+    .nav-container {
+        min-height: 72px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    /* Reduce the logo size slightly on smaller screens. */
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    /* Allow navigation links to scroll horizontally if necessary. */
+    .nav-links {
+        gap: 18px;
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 5px 0;
+    }
+
+    /* Make navigation text slightly smaller on mobile. */
+    .nav-links a {
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    /* Stack the hero content above the illustration. */
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Center the hero text and its buttons on mobile. */
+    .hero-content {
+        text-align: center;
+    }
+
+    /* Center the availability label on mobile. */
+    .availability {
+        justify-content: center;
+    }
+
+    /* Center the hero description. */
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Center the hero action buttons. */
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Center the social links. */
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Reduce the hero heading size for mobile screens. */
+    .hero h1 {
+        font-size: clamp(2.4rem, 9vw, 3.5rem);
+        letter-spacing: -1.5px;
+    }
+
+    /* Reduce the height needed for the hero illustration. */
+    .hero-visual {
+        min-height: 340px;
+    }
+
+    /* Make the about section use a single column. */
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    /* Center the about text on mobile. */
+    .about-text {
+        text-align: center;
+    }
+
+    /* Center the section headings and descriptions. */
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    /* Display project cards in one column on mobile. */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Limit project card width and center the cards. */
+    .project-card {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* Allow contact cards to occupy the available width. */
+    .contact-options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Keep contact cards centered and readable. */
+    .contact-option {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    /* Stack footer elements vertically. */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Center footer links. */
+    .footer-links {
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   13. RESPONSIVE DESIGN — SMALL PHONES
+   Provides additional adjustments for narrow screens.
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Use more of the available screen width. */
+    .container {
+        width: 92%;
+    }
+
+    /* Make the navigation spacing more compact. */
+    .nav-links {
+        gap: 12px;
+    }
+
+    /* Reduce button padding for narrow screens. */
+    .btn {
+        padding: 12px 17px;
+        font-size: 0.88rem;
+    }
+
+    /* Reduce the hero heading size. */
+    .hero h1 {
+        font-size: 2.35rem;
+    }
+
+    /* Reduce the hero description size. */
+    .hero-description {
+        font-size: 0.98rem;
+    }
+
+    /* Use a single column for about cards. */
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Use a single column for skills cards. */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduce skill card padding. */
+    .skill-card {
+        padding: 23px;
+    }
+
+    /* Reduce the code card's padding. */
+    .code-card {
+        padding: 20px;
+    }
+
+    /* Make floating badges smaller on narrow screens. */
+    .floating-badge {
+        padding: 9px 12px;
+        font-size: 0.75rem;
+    }
+
+    /* Prevent the floating badges from touching the screen edges. */
+    .badge-top {
+        right: 0;
+        top: 15px;
+    }
+
+    .badge-bottom {
+        left: 0;
+        bottom: 15px;
+    }
+
+    /* Reduce timeline content padding. */
+    .timeline-content {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   14. ACCESSIBILITY
+   Respects visitors who prefer reduced motion.
+   ========================================================= */
+
+/* Disable most decorative animations when requested by the user. */
+@media (prefers-reduced-motion: reduce) {
+
+    /* Remove smooth scrolling and unnecessary transitions. */
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
